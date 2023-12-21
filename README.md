@@ -45,7 +45,7 @@ Flow conservation:	 except for vertices `s` and `t`, the amount of flow entering
 Required flow: the amount of flow **existing** from `s` is equals to `d`; conversely, the amount of flow **entering** into `t` is equals to `d`.
 
 ## Solution
-The minimum cost flow problem is usually solved using linear programming. However, your job is to implement two metaheuristic algorithms that solve this problem.
+The minimum cost flow problem is usually solved using linear programming. However, your tasks is solve it using two metaheuristic algorithms.
 
 For both algorithms, the maximum execution budget is `100` iterations/epochs.
 
@@ -57,6 +57,14 @@ The second algorithm that you must implement is a single-object genetic algorith
 
 ### Task 3: Basics
 Of course, you need to implement the Graph class and all the necessary methods to check the quality/validity of the found solutions.
+
+### Task 4: Who's better?
+Use appropriate statistical methods (i.e., p-value and A12 effect size) to establish which one, among local search and genetic algorithms, is the best algorithm to solve the optimization problem.
+
+Your analysis must characterize the problem in some way. Possible features to consider are: number of edges, number of vertices, graph connectivity, distance between `s` and `t`, amount of flow to distribute, etc..
+
+> NOTE: Start by fixing all the parameters and then check whether you can repeat your analysis under different problem formulations.
+
 
 ### Remarks
 Please refer to the given method signatures and implement them without adding/removing parameters.
