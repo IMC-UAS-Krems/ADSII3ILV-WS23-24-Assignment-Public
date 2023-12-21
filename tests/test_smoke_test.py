@@ -1,7 +1,7 @@
 #
 # NOTE: This import is here ONLY to check that pytest works. 
 #
-from solution.basic_ds import foo
+from solution.graph import Graph
 
 def test_smoke_test():
     """
