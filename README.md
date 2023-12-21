@@ -45,22 +45,22 @@ Flow conservation:	 except for vertices `s` and `t`, the amount of flow entering
 Required flow: the amount of flow **existing** from `s` is equals to `d`; conversely, the amount of flow **entering** into `t` is equals to `d`.
 
 ## Solution
-The minimum cost flow problem can be solved by linear programming, since it optimizes a linear function and all constraints are linear. However, your job is to implement two metaheuristic algorithms that solve this problem.
-
-The first algorithm is a simple hill-climbing local search algorithm. Considering that this algorithm falls for local-minimum, you must implement a mechanism to randomly restart it, when the algorithm gets stuck. For this, you must implement the search loop from scratch.
-
-The second algorithm is a single-object genetic algorithm. For this, you can rely on the `pymoo` library.
+The minimum cost flow problem is usually solved using linear programming. However, your job is to implement two metaheuristic algorithms that solve this problem.
 
 For both algorithms, the maximum execution budget is `100` iterations/epochs.
 
-Of course, you need to implement the Graph class and the methods to validate whether a given problem (flow network) and solution (allocation of flow) are valid.
+### Task 1: Local Search
+The first algorithm is a simple hill-climbing local search algorithm. Considering that this algorithm tends to get stuck in local-minima, you must implement a mechanism to restart it (e.g., when the algorithm gets stuck). To solve this task, you must implement the basic hill climbing search loop from scratch.
 
-Please refer to the existing method signatures to create and validate Graphs as well as solutions.
+### Task 2: Evolutionary Search
+The second algorithm that you must implement is a single-object genetic algorithm. For this, you can rely on the `pymoo` library. Thus, your job is to cast/define the flow optimization problem (fitness function, encoding of the solutions, etc.)
 
-> Note: You need to implement those methods, but you cannot change their signature!
+### Task 3: Basics
+Of course, you need to implement the Graph class and all the necessary methods to check the quality/validity of the found solutions.
+
+### Remarks
+Please refer to the given method signatures and implement them without adding/removing parameters.
 
 ## Tests
 
-Even if you rely on existing libraries you must test your implementations (Graph, Local Search, etc.)
-
-The target coverage level is 90%
+Test your solution and achieve the target coverage level, i.e., 90% stmt coverage
